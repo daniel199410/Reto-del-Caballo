@@ -1,0 +1,203 @@
+@charset "utf-8";
+body{
+	font-family: 'Baloo Chettan', cursive;
+	background-color:#FFF9C4;
+}
+
+.clear{
+	clear:both;	
+}
+
+header{
+    width: 60%;
+	margin: 40px auto;
+    text-align: center;
+    font-size: 3rem;
+    color: #212121;
+}
+
+.nivel {
+    width: 70%;
+    margin: 0 auto;
+    background-color: #F9A825;
+    font-size: 2.5rem;
+    text-align: center;
+    color: #fff;
+    padding: 20px 0;
+	border-radius: 30px;
+}
+
+.puntajes, .instrucciones{
+    width: 60%;
+    margin: 20px auto;
+}
+
+.instrucciones{
+	text-align:center;	
+}
+
+.panel {
+    width: 23%;
+    background: #FDD835;
+    text-align: center;
+    padding: 25px 0;
+    float: left;
+    font-size: 1.3rem;
+    border-radius: 30px;
+    margin-left: 10px;
+}
+
+.board {
+    width: 30%;
+    margin: 0 auto;
+}
+
+.cell {
+    width: 12.5%;
+    height: 50px;
+    background: #000;
+    float: left;
+}
+
+.cell:hover{
+	background:#625e2c;
+}
+
+.white-{
+	background:#d8b58b;
+}
+
+.black-{
+	background:#c0814c;
+}
+
+footer {
+    text-align: center;
+    margin-top: 10px;
+    padding: 10px 0;
+    font-size: 1.5rem;
+}
+
+@media screen and (min-width: 1920px){
+	.cell {
+    		height: 96px;
+	}
+}
+
+@media screen and (min-width: 1024px) and (max-width:1920px){
+	.cell {
+    		height: 54px;
+	}
+}
+
+@media screen and (min-width: 800px) and (max-width:1024px){
+	.board {
+    		width: 50%;
+	}
+	.cell {
+    		height: 64px;
+	}
+}
+
+@media screen and (min-width: 425px) and (max-width:800px){
+	.puntajes {
+   		 width: 70%;
+	}
+	.board {
+ 		width: 50%;
+	}
+	.cell {
+    		height: 47px;
+	}
+}
+
+@media screen and (min-width: 375px) and (max-width:425px){
+	header{
+   		 font-size: 2.1rem;
+	}
+
+	.nivel {
+		    font-size: 1.8rem;
+		    padding: 10px 0;
+	}
+	.puntajes {
+   		 width: 100%;
+	}
+	.panel {
+  		  width: 22%;
+	}
+	.board {
+    		width: 100%;
+	}
+	.cell {
+   		 height: 53px;
+	}
+}
+
+@media screen and (min-width: 360px) and (max-width:375px){
+	header {
+  	  width: 100%;
+	      margin: 10px auto;
+	}
+	.nivel {
+    		font-size: 1.2rem;
+	}
+	.panel {
+   		 padding: 15px 0;
+    		font-size: 0.8rem;
+   		 border-radius: 20px;
+	}
+	.cell {
+   		 height: 46px;
+	}
+	footer {
+    		margin-top: 0;
+    		font-size: 1.2rem;
+	}
+}
+
+@media screen and (min-width: 240px) and (max-width:360px){
+	header {
+    		font-size: 1.5rem;
+	}
+	.nivel {
+    		font-size: 1.2rem;
+    		padding: 5px 0;
+    		border-radius: 15px;
+	}
+	.puntajes {
+   		width: 100%;
+	}
+	.panel {
+		width: 21%;
+		font-size: 0.8rem;
+		padding: 10px 0;
+		border-radius: 10px;
+	}
+	.board {
+   		 width: 100%;
+   		 margin: 0 auto;
+	}
+	.cell {
+    		height: 40px;
+	}
+}
+
+@media screen and (max-width:240px){
+	header {
+    		width: 100%;
+    		margin: 5px auto;
+    		font-size: 1.5rem;
+	}
+	.nivel {
+   		 width: 60%;
+		font-size: 0.8rem;
+	}
+	.cell {
+    		height: 30px;
+	}
+	footer {
+    		margin-top: 0px;
+   		font-size: 1rem;
+	}
+}

@@ -1,0 +1,162 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no,  initicial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <title>Reto del caballo</title>
+        
+        <link rel="stylesheet" href="css/csslab-reseter_v2.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Baloo+Chettan" rel="stylesheet">
+        <link rel="stylesheet" href="css/Estilos.css">
+    </head>
+    
+    <body>
+    	<header>
+        	<h1>Reto del caballo</h1>
+        </header>
+        <div class="puntajes">
+        	<div class="panel">
+            	<p>Movidas</p>
+            	<p id="movidas">0</p>
+            </div>
+            <div class="panel">
+            	<p>Tiempo</p>
+            	<span id="min">00</span>
+                :
+                <span id="seg">00</span>
+            </div>
+            <div class="panel">
+            	<p>Vidas</p>
+            	<p>1</p>
+            </div>
+            <div class="panel">
+            	<p>Opciones</p>
+                <p id="opciones">0</p>
+            </div>
+            <div class="clear">
+            </div>
+        </div>
+        <div id = "content_board">
+        	<div id = "board" name = "board">
+            	<div class="board">
+                	<div class="rows">
+                    	<div id = "c07" class="cell white-" onclick="checkCell(0, 7)"></div>
+                        <div id = "c17" class="cell black-" onclick="checkCell(1, 7)"></div>
+                        <div id = "c27" class="cell white-" onclick="checkCell(2, 7)"></div>
+                        <div id = "c37" class="cell black-" onclick="checkCell(3, 7)"></div>
+                        <div id = "c47" class="cell white-" onclick="checkCell(4, 7)"></div>
+                        <div id = "c57" class="cell black-" onclick="checkCell(5, 7)"></div>
+                        <div id = "c67" class="cell white-" onclick="checkCell(6, 7)"></div>
+                        <div id = "c77" class="cell black-" onclick="checkCell(7, 7)"></div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="rows">
+                    	<div id = "c06" class="cell black-" onclick="checkCell(0, 6)"></div>
+                        <div id = "c16" class="cell white-" onclick="checkCell(1, 6)"></div>
+                        <div id = "c26" class="cell black-" onclick="checkCell(2, 6)"></div>
+                        <div id = "c36" class="cell white-" onclick="checkCell(3, 6)"></div>
+                        <div id = "c46" class="cell black-" onclick="checkCell(4, 6)"></div>
+                        <div id = "c56" class="cell white-" onclick="checkCell(5, 6)"></div>
+                        <div id = "c66" class="cell black-" onclick="checkCell(6, 6)"></div>
+                        <div id = "c76" class="cell white-" onclick="checkCell(7, 6)"></div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="rows">
+                    	<div id = "c05" class="cell white-" onclick="checkCell(0, 5)"></div>
+                        <div id = "c15" class="cell black-" onclick="checkCell(1, 5)"></div>
+                        <div id = "c25" class="cell white-" onclick="checkCell(2, 5)"></div>
+                        <div id = "c35" class="cell black-" onclick="checkCell(3, 5)"></div>
+                        <div id = "c45" class="cell white-" onclick="checkCell(4, 5)"></div>
+                        <div id = "c55" class="cell black-" onclick="checkCell(5, 5)"></div>
+                        <div id = "c65" class="cell white-" onclick="checkCell(6, 5)"></div>
+                        <div id = "c75" class="cell black-" onclick="checkCell(7, 5)"></div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="rows">
+                    	<div id = "c04" class="cell black-" onclick="checkCell(0, 4)"></div>
+                        <div id = "c14" class="cell white-" onclick="checkCell(1, 4)"></div>
+                        <div id = "c24" class="cell black-" onclick="checkCell(2, 4)"></div>
+                        <div id = "c34" class="cell white-" onclick="checkCell(3, 4)"></div>
+                        <div id = "c44" class="cell black-" onclick="checkCell(4, 4)"></div>
+                        <div id = "c54" class="cell white-" onclick="checkCell(5, 4)"></div>
+                        <div id = "c64" class="cell black-" onclick="checkCell(6, 4)"></div>
+                        <div id = "c74" class="cell white-" onclick="checkCell(7, 4)"></div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="rows">
+                    	<div id = "c03" class="cell white-" onclick="checkCell(0, 3)"></div>
+                        <div id = "c13" class="cell black-" onclick="checkCell(1, 3)"></div>
+                        <div id = "c23" class="cell white-" onclick="checkCell(2, 3)"></div>
+                        <div id = "c33" class="cell black-" onclick="checkCell(3, 3)"></div>
+                        <div id = "c43" class="cell white-" onclick="checkCell(4, 3)"></div>
+                        <div id = "c53" class="cell black-" onclick="checkCell(5, 3)"></div>
+                        <div id = "c63" class="cell white-" onclick="checkCell(6, 3)"></div>
+                        <div id = "c73" class="cell black-" onclick="checkCell(7, 3)"></div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="rows">
+                    	<div id = "c02" class="cell black-" onclick="checkCell(0, 2)"></div>
+                        <div id = "c12" class="cell white-" onclick="checkCell(1, 2)"></div>
+                        <div id = "c22" class="cell black-" onclick="checkCell(2, 2)"></div>
+                        <div id = "c32" class="cell white-" onclick="checkCell(3, 2)"></div>
+                        <div id = "c42" class="cell black-" onclick="checkCell(4, 2)"></div>
+                        <div id = "c52" class="cell white-" onclick="checkCell(5, 2)"></div>
+                        <div id = "c62" class="cell black-" onclick="checkCell(6, 2)"></div>
+                        <div id = "c72" class="cell white-" onclick="checkCell(7, 2)"></div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="rows">
+                    	<div id = "c01" class="cell white-" onclick="checkCell(0, 1)"></div>
+                        <div id = "c11" class="cell black-" onclick="checkCell(1, 1)"></div>
+                        <div id = "c21" class="cell white-" onclick="checkCell(2, 1)"></div>
+                        <div id = "c31" class="cell black-" onclick="checkCell(3, 1)"></div>
+                        <div id = "c41" class="cell white-" onclick="checkCell(4, 1)"></div>
+                        <div id = "c51" class="cell black-" onclick="checkCell(5, 1)"></div>
+                        <div id = "c61" class="cell white-" onclick="checkCell(6, 1)"></div>
+                        <div id = "c71" class="cell black-" onclick="checkCell(7, 1)"></div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="rows">
+                    	<div id = "c00" class="cell black-" onclick="checkCell(0, 0)"></div>
+                        <div id = "c10" class="cell white-" onclick="checkCell(1, 0)"></div>
+                        <div id = "c20" class="cell black-" onclick="checkCell(2, 0)"></div>
+                        <div id = "c30" class="cell white-" onclick="checkCell(3, 0)"></div>
+                        <div id = "c40" class="cell black-" onclick="checkCell(4, 0)"></div>
+                        <div id = "c50" class="cell white-" onclick="checkCell(5, 0)"></div>
+                        <div id = "c60" class="cell black-" onclick="checkCell(6, 0)"></div>
+                        <div id = "c70" class="cell white-" onclick="checkCell(7, 0)"></div>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+		<div class="instrucciones">
+        	<h4>Instrucciones</h4>
+            <p>Mueve el caballo a través del tablero, intentando pasar por todas las casillas.</p>
+            <p>No se puede pasar por una casilla ya visitada y el caballo solo se mueve como generalmente lo hace en el ajedrez.</p>
+            <p>Las opciones son el número de movimientos posibles que tienes a partir de la posición actual.</p>
+        </div>
+          <!-- Modal Structure -->
+        <div id="modal1" class="modal">
+           	<div class="modal-content">
+              	<h4 id="header" class="center-align"></h4>
+              	<p id="felicitaciones" class="center-align"></p>
+            </div>
+            <div class="modal-footer">
+              	<a href="Reto del caballo.html" class="modal-action modal-close waves-effect waves-yellow btn-flat">Volver a jugar</a>
+            </div>	
+         </div>
+        <footer>
+        	<p>2016 Daniel Cataño Restrepo</p>
+        </footer>
+        
+        <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
+        <script src="js/Cronometro.js"></script>
+        <script src="js/Tablero.js"></script>
+        <script src="js/MovimientoCaballo.js"></script>
+        <script src="js/Celdas.js"></script>
+        <script src="js/Autplay.js"></script>
+    </body>
+</html>
